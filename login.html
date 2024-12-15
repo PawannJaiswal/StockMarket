@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: url('image/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.95); /* Changes for enhanced readability */
+            padding: 30px; /* More padding for a better look */
+            border-radius: 20px; /* Softer border-radius */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced box-shadow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .signin-content {
+            width: 100%; /* Adjust width for inside elements */
+        }
+
+        .signin-form, .social-login {
+            width: 100%; /* Ensure form and social login take full width */
+        }
+
+        .form-group {
+            margin-bottom: 20px; /* Increased bottom margin for better spacing */
+            position: relative;
+        }
+
+        .form-group input {
+            width: calc(100% - 20px); /* Calculate width to ensure padding doesn't expand it */
+            padding: 12px 10px; /* Increased padding for better text visibility */
+            border: 2px solid #ddd; /* Subtler border */
+            border-radius: 5px;
+            transition: border-color .3s; /* Smooth transition for border color */
+        }
+
+        .form-group input:focus,
+        .form-group input:valid {
+            border-color: #66afe9; /* Highlight effect on focus/valid */
+        }
+
+        .form-button {
+            text-align: center;
+            margin-top: 20px; /* Added margin top for spacing */
+        }
+
+        .form-submit {
+            padding: 12px 25px; /* Increased padding for a bigger button */
+            background-color: #007bff; /* Bootstrap primary color */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color .3s; /* Smooth transition for background color */
+        }
+
+        /* Hover & focus styles for the submit button */
+        .form-submit:hover, .form-submit:focus {
+            background-color: #0056b3; /* Darken button on hover/focus */
+        }
+
+        .signin-image figure img {
+            max-width: 100%; /* Ensure image is not bigger than its container */
+            height: auto; /* maintain aspect ratio */
+            border-radius: 10px; /* Soften the image edges */
+        }
+
+        .signup-image-link {
+            display: block;
+            text-align: center;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        .social-login ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center; /* Center align the social icons */
+        }
+
+        .social-login ul li {
+            display: inline;
+            margin: 0 5px; /* Reduced margin for a grouped appearance */
+        }
+
+        .social-icon {
+            width: 30px; /* Increased icon size */
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main">
+
+    <!-- Sign in Form -->
+    <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure>
+                        <img src="image/Signup.jpg" alt="sign up image">
+                    </figure>
+                    <a href="registration.html" class="signup-image-link">Create an account</a>
+                </div>
+
+                <div class="signin-form">
+                    <h2 class="form-title">Sign in</h2>
+                 
+                        <form method="get" action="login.php" class="register-form" id="login-form">
+
+                        <div class="form-group">
+                            <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="username" id="username" placeholder="Your Name" required pattern="[A-Za-z0-9]{3,}" title="Username should be at least 3 characters and contain only letters and numbers." />
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="password" id="password" placeholder="Password" required pattern=".{6,}" title="Password should be at least 6 characters long." />
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                            <label for="remember-me" class="label-agree-term">
+                                <span><span></span></span>Remember me
+                            </label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                        </div>
+                    </form>
+                    <div class="social-login">
+                        <span class="social-label">Or login with</span>
+                        <ul class="socials">
+                            <li><a href="https://www.facebook.com/"><img src="image/Facebook.jpg" alt="Facebook" class="social-icon"></a></li>
+                            <li><a href="https://www.linkedin.com/login"><img src="image/linkedin.png" alt="LinkedIn" class="social-icon"></a></li>
+                            <li><a href="https://twitter.com/login"><img src="image/twitter.png" alt="Twitter" class="social-icon"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
